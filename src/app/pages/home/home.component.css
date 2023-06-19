@@ -1,5 +1,41 @@
-/* div {
-    background-color: #064a62;
-    width: auto;
-    height: 100vh;
-} */
+.banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url("../../../assets/img2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    min-height: 100vh;
+}
+
+.content h1 {
+    color: var(--color4);
+    font-size: 100px;
+    font-weight: bold;
+    padding-bottom: 0.5rem;
+
+}
+
+.content h5 {
+    color: black;
+    padding-bottom: 1.5rem;
+}
+
+.content {
+    top: 35%;
+    left: 15%;
+    position: absolute;
+}
+
+.content a {
+    text-decoration: none;
+    background-color: var(--color4);
+    color: var(--color1);
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.content a:hover {
+
+    background-color: #fff;
+    color: var(--color3);
+}
