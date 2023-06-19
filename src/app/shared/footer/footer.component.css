@@ -1,0 +1,17 @@
+p,
+i {
+    color: white;
+}
+
+a {
+    color: var(--color4);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer {
+    overflow: hidden;
+    position: sticky;
+    top: 100%;
+
+}
