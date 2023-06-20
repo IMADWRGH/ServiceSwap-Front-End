@@ -24,18 +24,3 @@
     left: 15%;
     position: absolute;
 }
-
-.content a {
-    text-decoration: none;
-    background-color: var(--color4);
-    color: var(--color1);
-    padding: 10px 20px;
-    border-radius: 10px;
-    margin-top: 20px;
-}
-
-.content a:hover {
-
-    background-color: #fff;
-    color: var(--color3);
-}

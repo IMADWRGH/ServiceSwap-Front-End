@@ -1,0 +1,30 @@
+select {
+    border: none;
+    background-color: transparent
+}
+
+button {
+    background-color: var(--color4);
+}
+
+.content {
+
+    background-color: #fff;
+    border-radius: 25px;
+}
+
+.content a {
+    position: absolute;
+    text-decoration: none;
+    background-color: var(--color4);
+    color: var(--color1);
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.content a:hover {
+
+    background-color: #fff;
+    color: var(--color3);
+}
