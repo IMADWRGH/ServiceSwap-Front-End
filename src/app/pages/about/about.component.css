@@ -1,3 +1,9 @@
+h1 {
+    margin-left: 30%;
+    text-align: start;
+    color: #000000;
+}
+
 p,
 h2 {
     position: relative;
@@ -6,11 +12,11 @@ h2 {
 }
 
 div {
-    padding: 40px 0;
+    padding: 40px 10px;
 }
 
 .image {
-    height: 380px;
+    height: 250px;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
