@@ -22,7 +22,7 @@
 }
 
 .content {
-    top: 15%;
+    top: 28%;
     left: 15%;
     position: absolute;
 }
@@ -30,4 +30,8 @@
 span {
     color: black;
     font-family: serif;
+}
+
+.search {
+    padding-top: 0.5rem;
 }
