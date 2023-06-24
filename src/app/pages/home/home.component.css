@@ -1,5 +1,5 @@
 .banner {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url("../../../assets/img2.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../../../assets/img2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;
@@ -7,20 +7,27 @@
 }
 
 .content h1 {
-    color: var(--color4);
+    color: #fff;
     font-size: 100px;
     font-weight: bold;
-    padding-bottom: 0.5rem;
-
+    padding: 0.5rem;
+    margin: 0.5rem;
+    font-family: sans-serif;
 }
 
 .content h5 {
-    color: black;
-    padding-bottom: 1.5rem;
+    color: #595a5c;
+    padding: 0.5rem;
+    margin: 0.5rem;
 }
 
 .content {
     top: 15%;
     left: 15%;
     position: absolute;
+}
+
+span {
+    color: black;
+    font-family: serif;
 }
