@@ -1,14 +1,81 @@
-.card {
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../../../assets/img2.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    margin: 1.5rem;
-    padding: 2rem;
-}
+.container {}
+
 
 .header {
     text-align: center;
     font-weight: bold;
     margin: 20px;
+}
+
+a {
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 1.5vw;
+    color: aliceblue;
+
+}
+
+.repair {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../../../assets/img_service/Repair.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 2rem;
+    padding: 2rem;
+}
+
+.delevery {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../../../assets/img_service/delevery.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 2rem;
+    padding: 2rem;
+}
+
+.transport {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../../../assets/img_service/transport.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 2rem;
+    padding: 2rem;
+}
+
+.event {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../../../assets/img_service/event.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 2rem;
+    padding: 2rem;
+}
+
+.home {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../../../assets/img_service/home.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 2rem;
+    padding: 2rem;
+}
+
+.digital {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../../../assets/img_service/Repair.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 2rem;
+    padding: 2rem;
+}
+
+.other {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../../../assets/img_service/other.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 2rem;
+    padding: 2rem;
 }

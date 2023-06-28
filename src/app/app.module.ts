@@ -10,6 +10,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { SearchComponent } from './component/search/search.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { ServiceListCategoryComponent } from './lists_services/service-list-category/service-list-category.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ServiceListCategoryComponent } from './lists_services/service-list-cate
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

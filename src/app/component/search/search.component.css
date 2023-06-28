@@ -6,7 +6,7 @@
 .content a {
     position: absolute;
     text-decoration: none;
-    background-color: #112200;
+    background-color: #4d44fc;
     color: #fff;
     padding: 10px 20px;
     border-radius: 10px;
@@ -19,7 +19,7 @@
 }
 
 .content a:hover {
-    background-color: #fff;
+    background-color: #4d44fdab;
     color: black;
 }
 
