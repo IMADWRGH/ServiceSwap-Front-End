@@ -11,6 +11,8 @@ import { SearchComponent } from './component/search/search.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { ServiceListCategoryComponent } from './lists_services/service-list-category/service-list-category.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SingupComponent } from './singup/singup.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     AboutComponent,
     SearchComponent,
     NavbarComponent,
-    ServiceListCategoryComponent
+    ServiceListCategoryComponent,
+    SingupComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

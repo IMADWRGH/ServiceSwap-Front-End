@@ -1,0 +1,32 @@
+<div
+  class="d-flex justify-content-center align-items-center container"
+  style="height: 80vh"
+>
+  <form class="form">
+    <p class="form-title">Sign up</p>
+    <div class="input-container">
+      <input type="text" placeholder="Enter full name" />
+      <span> </span>
+    </div>
+    <div class="input-container">
+      <input type="email" placeholder="Enter email" />
+      <span> </span>
+    </div>
+    <div class="input-container">
+      <input type="password" placeholder="Enter password" />
+    </div>
+    <div class="input-container">
+      <select name="role">
+        <option value="" disabled selected>SignUp like...</option>
+        <option value="seller">Seller</option>
+        <option value="customer">Customer</option>
+      </select>
+    </div>
+    <button type="submit" class="submit">Sign in</button>
+
+    <p class="signup-link">
+      Have an account?
+      <a routerLink="/login">Log in</a>
+    </p>
+  </form>
+</div>
