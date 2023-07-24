@@ -1,4 +1,4 @@
-export interface SellerModule {
+export interface Seller {
   sellerId: number;
   image: string;
   address: string;
