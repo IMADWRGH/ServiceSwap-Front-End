@@ -6,6 +6,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { ServiceListCategoryComponent } from './lists_services/service-list-category/service-list-category.component';
 import { SingupComponent } from './singup/singup.component';
 import { LoginComponent } from './login/login.component';
+import { ListCategoryComponent } from './lists_services/list-category/list-category.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -14,7 +15,8 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'service', component: ServiceListCategoryComponent },
   { path: 'singup', component: SingupComponent },
-  { path: 'login', component: LoginComponent }
+  { path: 'login', component: LoginComponent },
+  { path: 'serviceType/:type', component: ListCategoryComponent }
 ];
 
 @NgModule({

@@ -3,40 +3,53 @@
   <div class="row">
     <div class="col-md-3 col-sm-6 col-6 repair">
       <div class="cards">
-        <a href=""><span>Repair and installation </span></a>
+        <a [routerLink]="['/serviceType', 'repair']"
+          ><span>Repair and installation </span></a
+        >
       </div>
     </div>
     <div class="col-md-3 col-sm-6 col-6 delevery">
       <div class="cards">
-        <a href=""><span>Delevery services </span></a>
+        <a [routerLink]="['/serviceType', 'delevery']"
+          ><span>Delevery services </span></a
+        >
       </div>
     </div>
     <div class="col-md-3 col-sm-6 col-6 digital">
       <div class="cards">
-        <a href=""><span>Digital services </span></a>
+        <a [routerLink]="['/serviceType', 'digital']"
+          ><span>Digital services </span></a
+        >
       </div>
     </div>
     <div class="col-md-3 col-sm-6 col-6 home">
       <div class="cards">
-        <a href=""><span>Home services </span></a>
+        <a [routerLink]="['/serviceType', 'home']"
+          ><span>Home services </span></a
+        >
       </div>
     </div>
     <div class="col-md-3 col-sm-6 col-6 transport">
       <div class="cards">
-        <a href=""><span>Transport </span></a>
+        <a [routerLink]="['/serviceType', 'transport']"
+          ><span>Transport </span></a
+        >
       </div>
     </div>
     <div class="col-md-3 col-sm-6 col-6 event">
       <div class="cards">
-        <a href=""><span>Event services </span></a>
+        <a [routerLink]="['/serviceType', 'event']"
+          ><span>Event services </span></a
+        >
       </div>
     </div>
 
     <div class="col-md-3 col-sm-6 col-6 other">
       <div class="cards">
-        <a href=""><span>Other </span></a>
+        <a [routerLink]="['/serviceType', 'other']"><span>Other </span></a>
       </div>
     </div>
   </div>
 </div>
 <div></div>
+<router-outlet></router-outlet>

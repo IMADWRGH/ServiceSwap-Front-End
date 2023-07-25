@@ -14,8 +14,26 @@ export class ServiceService {
   getAllServices(): Observable<Service[]> {
     return this.Http.get<Service[]>(this.APiUrl);
   }
-
+  getData(): Observable<Service[]> {
+    return this.Http.get<Service[]>(`${this.APiUrl}/${"data"}`);
+  }
   getServiceById(id: number): Observable<Service> {
     return this.Http.get<Service>(`${this.APiUrl}/${id}`);
+  }
+
+  getServiceByType(type: string): Observable<Service[]> {
+    return this.Http.get<Service[]>(`${this.APiUrl}/${type}`);
+  }
+
+  createService(service: Service): Observable<Service> {
+    return this.Http.post<Service>(this.APiUrl, service);
+  }
+
+  updateService(id: number, service: Service): Observable<Service> {
+    return this.Http.put<Service>(`${this.APiUrl}/${id}`, service);
+  }
+
+  deleteService(id: number): Observable<void> {
+    return this.Http.delete<void>(`${this.APiUrl}/${id}`);
   }
 }

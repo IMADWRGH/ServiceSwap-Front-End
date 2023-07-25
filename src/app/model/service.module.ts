@@ -1,8 +1,9 @@
-import { Panel } from "./Panel.module";
+import { Panel } from "./panel.module";
 import { Reviews } from "./review.module";
 import { Seller } from "./seller.module";
 
 export interface Service {
+    getServicesByType(arg0: string): unknown;
     serviceId: number;
     nameService: string;
     description: string;

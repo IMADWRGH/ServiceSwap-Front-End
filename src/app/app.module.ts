@@ -13,6 +13,7 @@ import { ServiceListCategoryComponent } from './lists_services/service-list-cate
 import { ReactiveFormsModule } from '@angular/forms';
 import { SingupComponent } from './singup/singup.component';
 import { LoginComponent } from './login/login.component';
+import { ListCategoryComponent } from './lists_services/list-category/list-category.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { LoginComponent } from './login/login.component';
     NavbarComponent,
     ServiceListCategoryComponent,
     SingupComponent,
-    LoginComponent
+    LoginComponent,
+    ListCategoryComponent
   ],
   imports: [
     BrowserModule,
