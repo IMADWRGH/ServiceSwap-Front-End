@@ -2,10 +2,10 @@
   class="d-flex justify-content-center align-items-center container"
   style="height: 80vh"
 >
-  <form class="form">
+  <form class="form" (ngSubmit)="onSubmit()">
     <p class="form-title">Login</p>
     <div class="input-container">
-      <input type="email" placeholder="Enter email" />
+      <input type="email" id="email" name="email" placeholder="Enter email" />
       <span> </span>
     </div>
     <div class="input-container">

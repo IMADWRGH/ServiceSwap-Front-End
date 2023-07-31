@@ -14,6 +14,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { SingupComponent } from './singup/singup.component';
 import { LoginComponent } from './login/login.component';
 import { ListCategoryComponent } from './lists_services/list-category/list-category.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ListCategoryComponent } from './lists_services/list-category/list-categ
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

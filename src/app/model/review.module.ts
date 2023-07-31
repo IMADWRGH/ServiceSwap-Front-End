@@ -1,3 +1,3 @@
-export interface Reviews {
+export class Reviews {
 
 }

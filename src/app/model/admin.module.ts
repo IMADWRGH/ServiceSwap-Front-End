@@ -1,6 +1,7 @@
-export interface Admin {
-    userId: number;
-    username: string;
-    password: string;
-    roles: string[];
+export class Admin {
+    adminId?: number;
+    email?: string;
+    fullname?: string;
+    password?: string;
+    role?: string;
 }
