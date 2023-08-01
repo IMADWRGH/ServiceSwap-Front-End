@@ -15,6 +15,9 @@ import { SingupComponent } from './singup/singup.component';
 import { LoginComponent } from './login/login.component';
 import { ListCategoryComponent } from './lists_services/list-category/list-category.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AdminComponent } from './admin/admin.component';
+import { SellerComponent } from './seller/seller.component';
+import { CustomerComponent } from './customer/customer.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { HttpClientModule } from '@angular/common/http';
     ServiceListCategoryComponent,
     SingupComponent,
     LoginComponent,
-    ListCategoryComponent
+    ListCategoryComponent,
+    AdminComponent,
+    SellerComponent,
+    CustomerComponent
   ],
   imports: [
     BrowserModule,

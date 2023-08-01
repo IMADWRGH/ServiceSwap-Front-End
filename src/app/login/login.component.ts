@@ -25,9 +25,9 @@ export class LoginComponent {
     private authenticationService: AuthServiceService
   ) {
     // redirect to home if already logged in
-    if (this.authenticationService.userValue) {
-      this.router.navigate(['/']);
-    }
+    // if (this.authenticationService.userValue) {
+    //   this.router.navigate(['/']);
+    // }
   }
 
   ngOnInit() {

@@ -16,10 +16,8 @@ export class AuthServiceService {
   handleError(error: any) {
     let errorMessage = '';
     if (error.error instanceof ErrorEvent) {
-      // client-side error
       errorMessage = `Error: ${error.error.message}`;
     } else {
-      // server-side error
       errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
     }
     return throwError(() => new Error(errorMessage));
@@ -31,18 +29,33 @@ export class AuthServiceService {
     return this.http.post(url, user).pipe(catchError(this.handleError))
 
   }
-
   login(user: User) {
-    return this.http
+    this.http
       .post<any>(`${this.API}/login`, user)
       .subscribe((result: any) => {
         localStorage.setItem('access_token', result.token);
-        this.getUserProfile(result._id).subscribe((result) => {
-          this.currentUser = result;
-          this.router.navigate(['user-profile/' + result.msg._id]);
+        this.getUserProfile(result._id, result.userType).subscribe((userProfile: any) => {
+
+          this.currentUser = userProfile;
+
+          switch (userProfile.role) {
+            case 'admin':
+              this.router.navigate(['admin/' + userProfile._id]); // assuming admin's route
+              break;
+            case 'seller':
+              this.router.navigate(['seller/' + userProfile._id]); // assuming seller's route
+              break;
+            case 'customer':
+              this.router.navigate(['customer/' + userProfile._id]); // assuming customer's route
+              break;
+            default:
+              this.router.navigate(['login']);
+          }
         });
       });
   }
+
+
 
   getToken() {
     return localStorage.getItem('access_token');
@@ -57,9 +70,8 @@ export class AuthServiceService {
       this.router.navigate(['log-in']);
     }
   }
-  // User profile
-  getUserProfile(id: any): Observable<any> {
-    let api = `${this.API}/user-profile/${id}`;
+  getUserProfile(id: number, userType: string): Observable<User> {
+    let api = `${this.API}/${userType}/${id}`;
     return this.http.get(api, { headers: this.headers }).pipe(
       map((result) => {
         return result || {};
