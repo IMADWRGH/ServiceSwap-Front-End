@@ -34,28 +34,28 @@ export class AuthServiceService {
       .post<any>(`${this.API}/login`, user)
       .subscribe((result: any) => {
         localStorage.setItem('access_token', result.token);
-        this.getUserProfile(result._id, result.userType).subscribe((userProfile: any) => {
-
+        this.getUserProfile(result.userId, result.userType).subscribe((userProfile: any) => {
           this.currentUser = userProfile;
-
-          switch (userProfile.role) {
-            case 'admin':
-              this.router.navigate(['admin/' + userProfile._id]); // assuming admin's route
-              break;
-            case 'seller':
-              this.router.navigate(['seller/' + userProfile._id]); // assuming seller's route
-              break;
-            case 'customer':
-              this.router.navigate(['customer/' + userProfile._id]); // assuming customer's route
-              break;
-            default:
-              this.router.navigate(['login']);
-          }
+          this.navigateUser(userProfile);
         });
-      });
+      }), catchError(this.handleError);
   }
 
-
+  navigateUser(userProfile: any) {
+    switch (userProfile.role) {
+      case 'admin':
+        this.router.navigate(['admin/' + userProfile.id]);
+        break;
+      case 'seller':
+        this.router.navigate(['seller/' + userProfile.id]);
+        break;
+      case 'customer':
+        this.router.navigate(['customer/' + userProfile.id]);
+        break;
+      default:
+        this.router.navigate(['login']);
+    }
+  }
 
   getToken() {
     return localStorage.getItem('access_token');
@@ -70,8 +70,8 @@ export class AuthServiceService {
       this.router.navigate(['log-in']);
     }
   }
-  getUserProfile(id: number, userType: string): Observable<User> {
-    let api = `${this.API}/${userType}/${id}`;
+  getUserProfile(userId: number, userType: string): Observable<User> {
+    let api = `${this.API}/${userType}/${userId}`;
     return this.http.get(api, { headers: this.headers }).pipe(
       map((result) => {
         return result || {};
