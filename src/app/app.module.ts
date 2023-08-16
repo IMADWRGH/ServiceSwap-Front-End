@@ -19,6 +19,10 @@ import { AdminComponent } from './admin/admin.component';
 import { SellerComponent } from './seller/seller.component';
 import { CustomerComponent } from './customer/customer.component';
 import { AuthInterceptor } from './services/authconfig.interceptor';
+import { SidebarComponent } from './admin/sidebar/sidebar.component';
+import { ProfilComponent } from './admin/profil/profil.component';
+import { AddServiceComponent } from './seller/add-service/add-service.component';
+import { PanelComponent } from './customer/panel/panel.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +39,11 @@ import { AuthInterceptor } from './services/authconfig.interceptor';
     ListCategoryComponent,
     AdminComponent,
     SellerComponent,
-    CustomerComponent
+    CustomerComponent,
+    SidebarComponent,
+    ProfilComponent,
+    AddServiceComponent,
+    PanelComponent
   ],
   imports: [
     BrowserModule,
