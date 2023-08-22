@@ -20,6 +20,9 @@ import { SidebarComponent } from './admin/sidebar/sidebar.component';
 import { ProfilComponent } from './admin/profil/profil.component';
 import { AddServiceComponent } from './seller/add-service/add-service.component';
 import { PanelComponent } from './customer/panel/panel.component';
+import { BodyComponent } from './admin/body/body.component';
+import { ServicesComponent } from './admin/services/services.component';
+import { StatisticsComponent } from './admin/statistics/statistics.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +47,9 @@ import { PanelComponent } from './customer/panel/panel.component';
     PanelComponent,
     ProfilComponent,
     SidebarComponent,
+    BodyComponent,
+    ServicesComponent,
+    StatisticsComponent,
   ],
   imports: [
     BrowserModule,
