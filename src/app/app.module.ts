@@ -15,9 +15,6 @@ import { SingupComponent } from './singup/singup.component';
 import { LoginComponent } from './login/login.component';
 import { ListCategoryComponent } from './lists_services/list-category/list-category.component';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
-import { AdminComponent } from './admin/admin.component';
-import { SellerComponent } from './seller/seller.component';
-import { CustomerComponent } from './customer/customer.component';
 import { AuthInterceptor } from './services/authconfig.interceptor';
 import { SidebarComponent } from './admin/sidebar/sidebar.component';
 import { ProfilComponent } from './admin/profil/profil.component';
@@ -37,13 +34,16 @@ import { PanelComponent } from './customer/panel/panel.component';
     SingupComponent,
     LoginComponent,
     ListCategoryComponent,
-    AdminComponent,
-    SellerComponent,
-    CustomerComponent,
     SidebarComponent,
     ProfilComponent,
     AddServiceComponent,
-    PanelComponent
+    PanelComponent,
+    AddServiceComponent,
+    ProfilComponent,
+    ProfilComponent,
+    PanelComponent,
+    ProfilComponent,
+    SidebarComponent,
   ],
   imports: [
     BrowserModule,

@@ -7,9 +7,7 @@ import { ServiceListCategoryComponent } from './lists_services/service-list-cate
 import { SingupComponent } from './singup/singup.component';
 import { LoginComponent } from './login/login.component';
 import { ListCategoryComponent } from './lists_services/list-category/list-category.component';
-import { AdminComponent } from './admin/admin.component';
-import { SellerComponent } from './seller/seller.component';
-import { CustomerComponent } from './customer/customer.component';
+
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -20,9 +18,6 @@ const routes: Routes = [
   { path: 'singup', component: SingupComponent },
   { path: 'login', component: LoginComponent },
   { path: 'serviceType/:type', component: ListCategoryComponent },
-  { path: 'admin', component: AdminComponent },
-  { path: 'seller', component: SellerComponent },
-  { path: 'customer', component: CustomerComponent },
 ];
 
 @NgModule({
