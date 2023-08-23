@@ -11,6 +11,9 @@ export class ServiceService {
   constructor(private Http: HttpClient) { }
 
 
+  getServices(name: string, city: string, type: string): Observable<Service[]> {
+    return this.Http.get<Service[]>(`${this.APiUrl}/${name}/${city}/${type}`);
+  }
   getAllServices(): Observable<Service[]> {
     return this.Http.get<Service[]>(this.APiUrl);
   }
