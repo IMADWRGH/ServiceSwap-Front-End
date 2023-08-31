@@ -2,14 +2,42 @@
   class="d-flex justify-content-center align-items-center container"
   style="height: 80vh"
 >
-  <form class="form" (ngSubmit)="onSubmit()">
+  <form class="form" [formGroup]="loginForm" (ngSubmit)="LoginUser()">
     <p class="form-title">Login</p>
     <div class="input-container">
-      <input type="email" id="email" name="email" placeholder="Enter email" />
-      <span> </span>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Enter email"
+        formControlName="email"
+        [class.invalid]="
+          loginForm.get('email')?.invalid &&
+          (loginForm.get('email')?.dirty || loginForm.get('email')?.touched)
+        "
+      />
+      <span
+        *ngIf="
+          loginForm.get('email')?.hasError('require') &&
+          (loginForm.get('email')?.dirty || loginForm.get('email')?.touched)
+        "
+        class="error"
+      >
+        this email is required.
+      </span>
     </div>
     <div class="input-container">
-      <input type="password" placeholder="Enter password" />
+      <input
+        type="password"
+        placeholder="Enter password"
+        formControlName="password"
+        [class.invalid]="
+          loginForm.get('password')?.invalid &&
+          (loginForm.get('password')?.dirty ||
+            loginForm.get('password')?.touched)
+        "
+      />
+      <span class="invalid-feedback"> this password is required. </span>
     </div>
 
     <button type="submit" class="submit">Login</button>

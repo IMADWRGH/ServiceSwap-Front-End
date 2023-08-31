@@ -7,12 +7,12 @@ import { ServiceListCategoryComponent } from './lists_services/service-list-cate
 import { SingupComponent } from './singup/singup.component';
 import { LoginComponent } from './login/login.component';
 import { ListCategoryComponent } from './lists_services/list-category/list-category.component';
-import { SidebarComponent } from './admin/sidebar/sidebar.component';
 import { BodyComponent } from './admin/body/body.component';
 
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '**', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'home', component: HomeComponent },
