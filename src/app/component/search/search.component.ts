@@ -18,7 +18,7 @@ export class SearchComponent implements OnInit {
     this.form = this.formBuilder.group({});
   }
   ngOnInit(): void {
-    this.getSelectData();
+    // this.getSelectData();
   }
   getSelectData() {
     this.service.getData().subscribe(

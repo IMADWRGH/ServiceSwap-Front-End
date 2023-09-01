@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthServiceService } from '../services/auth-service.service';
 import { Router } from '@angular/router';
 
@@ -14,10 +14,10 @@ export class SingupComponent implements OnInit {
   }
   constructor(public fb: FormBuilder, public authServices: AuthServiceService, public router: Router) {
     this.signupForm = this.fb.group({
-      name: [''],
-      email: [''],
-      password: [''],
-      role: [''],
+      name: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', Validators.required],
+      role: ['', Validators.required],
     })
   }
   registerUser() {

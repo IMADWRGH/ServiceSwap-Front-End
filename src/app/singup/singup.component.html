@@ -2,7 +2,7 @@
   class="d-flex justify-content-center align-items-center container"
   style="height: 80vh"
 >
-  <form class="form" [formGroup]="signupForm">
+  <form class="form" [formGroup]="signupForm" (ngSubmit)="registerUser()">
     <p class="form-title">Sign up</p>
     <div class="input-container">
       <input type="text" placeholder="Enter full name" formControlName="name" />
@@ -22,8 +22,8 @@
     <div class="input-container">
       <select name="role" formControlName="role">
         <option value="" disabled selected>SignUp like...</option>
-        <option value="seller">Seller</option>
-        <option value="customer">Customer</option>
+        <option value="SELLER">Seller</option>
+        <option value="CUSTOMER">Customer</option>
       </select>
     </div>
     <button type="submit" class="submit">Sign in</button>
