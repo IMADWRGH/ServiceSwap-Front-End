@@ -1,18 +1,33 @@
-<div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed' : ''">
-  <div class="logo-container">
-    <div class="logo-text" *ngIf="collapsed">ServiceSwap</div>
-    <button class="btn-close" *ngIf="collapsed">
-      <i class="fal faa-time close-icon"></i>
-    </button>
+<div class="container-fluid">
+  <div class="row flex-nowrap">
+    <div class="bg-dark col-auto col-md-2 min-vh-100">
+      <div class="bg-dark p-4">
+        <a
+          class="d-flex text-decoration-none mt-1 align-items-center text-white"
+        >
+          <span class="fs-4 d-none d-sm-inline">ServiceSwap</span>
+        </a>
+        <ul class="nav nav-pills flex-column mt-4">
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="/home"
+              ><i class="fs-5 fa fa-guage"></i>
+              <span class="fs-4 d-none d-sm-inline">Dashboard</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="/home"
+              ><i class="fs-5 fa fa-guage"></i>
+              <span class="fs-4 d-none d-sm-inline">Dashboard</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="/home"
+              ><i class="fs-5 fa fa-guage"></i>
+              <span class="fs-4 d-none d-sm-inline">Dashboard</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
-  <ul class="sidenav-nav">
-    <li class="sidenav-nav-item" *ngFor="let data of navData">
-      <a class="sidenav-nav-link" [routerLink]="[data.routeLink]">
-        <i class="sidenav-link-icon" [class]="data.icon"></i>
-        <span class="sidenav-link-text" *ngIf="collapsed">{{
-          data.label
-        }}</span>
-      </a>
-    </li>
-  </ul>
 </div>

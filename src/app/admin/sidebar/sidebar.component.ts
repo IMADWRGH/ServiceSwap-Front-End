@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { navbarData } from './nav-data';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,6 +6,5 @@ import { navbarData } from './nav-data';
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent {
-  collapsed = false;
-  navData = navbarData
+
 }
