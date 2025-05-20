@@ -13,6 +13,7 @@ import { ServiceService } from 'src/app/services/service-service';
 export class SearchComponent implements OnInit {
   form: FormGroup;
   datas!: Service[];
+  serviceTypes: string[] = ['Service1', 'Service2', 'Service3'];
   errorMsg !: string;
   constructor(private formBuilder: FormBuilder, private service: ServiceService) {
     this.form = this.formBuilder.group({});
@@ -34,6 +35,21 @@ export class SearchComponent implements OnInit {
     );
   }
   Search() { }
+
+
+  // getAllService() {
+  //   this.service.getAllService().subscribe(
+  //     {
+  //       next: (data: Service[]) => {
+  //         this.datas = data;
+  //         console.log(data);
+  //       },
+  //       error: (err: any) => {
+  //         this.errorMsg = err;
+  //       }
+  //     }
+  //   );
+  // }
 
 
 
